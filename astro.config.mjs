@@ -8,4 +8,8 @@ export default defineConfig({
   site: "https://Josh-Williams-Curtin.github.io",
   base: "/astro-demo",
   integrations: [preact()],
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: "hover",
+  },
 });
