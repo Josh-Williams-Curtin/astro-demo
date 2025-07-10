@@ -26,6 +26,7 @@ export async function getStaticPaths() {
 // To receive information in the HTML template of a page route, write it outside getStaticPaths().
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout pageTitle={tag}>
@@ -33,7 +34,7 @@ const { posts } = Astro.props;
   <ul>
     {
       posts.map((post: any) => (
-        <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
+        <BlogPost url={`${base}/posts/${post.id}/`} title={post.data.title} />
       ))
     }
   </ul>
