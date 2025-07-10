@@ -1,47 +1,63 @@
-# Astro Starter Kit: Minimal
+# Astro Demo Blog
 
-```sh
-npm create astro@latest -- --template minimal
+A personal blog built with Astro, featuring blog posts, tags, and a responsive design.
+
+## Live Site
+
+Visit the site: [https://josh-williams-curtin.github.io/astro-demo](https://josh-williams-curtin.github.io/astro-demo)
+
+## Features
+
+- **Blog Posts**: Markdown-based blog posts with frontmatter
+- **Tag System**: Categorize and filter posts by tags
+- **Responsive Design**: Mobile-friendly navigation with hamburger menu
+- **Dark/Light Theme**: Toggle between themes
+- **RSS Feed**: Subscribe to blog updates
+- **GitHub Pages**: Automatic deployment
+
+## Tech Stack
+
+- **Astro**: Static site generator
+- **Preact**: Interactive components
+- **Markdown**: Content management
+- **GitHub Actions**: CI/CD deployment
+
+## Project Structure
+
+```
+src/
+├── components/     # Reusable UI components
+├── layouts/        # Page layouts
+├── pages/          # Route pages
+├── blog/           # Markdown blog posts
+├── styles/         # Global CSS
+└── scripts/        # Client-side JavaScript
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Commands
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Command           | Action                                       |
+| :---------------- | :------------------------------------------- |
+| `npm install`     | Installs dependencies                        |
+| `npm run dev`     | Starts local dev server at `localhost:4321`  |
+| `npm run build`   | Build your production site to `./dist/`      |
+| `npm run preview` | Preview your build locally, before deploying |
 
-## 🚀 Project Structure
+## Deployment
 
-Inside of your Astro project, you'll see the following folders and files:
+The site is automatically deployed to GitHub Pages via GitHub Actions. Simply push to the `main` branch to trigger a new deployment.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Blog Posts
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Blog posts are written in Markdown and stored in `src/blog/`. Each post includes:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Title, description, and author
+- Publication date
+- Tags for categorization
+- Featured image
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Customization
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Theme**: Toggle between light and dark modes
+- **Navigation**: Responsive hamburger menu for mobile
+- **Styling**: Custom CSS with CSS variables for theming
