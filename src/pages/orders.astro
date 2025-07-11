@@ -1,0 +1,15 @@
+---
+const title = Astro.locals.welcomeTitle();
+const orders = Astro.locals.orders;
+const data = Astro.locals;
+---
+
+<h1>{title}</h1>
+<p>This data is from middleware.</p>
+<ul>
+  {
+    orders.map((order) => {
+      return <li>{order.items.join(", ")}</li>;
+    })
+  }
+</ul>
